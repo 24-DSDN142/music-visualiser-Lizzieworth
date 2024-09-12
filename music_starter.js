@@ -1,3 +1,230 @@
+
+
+
+
+// This array stores multiple images, but that image needs to be loaded
+let images = [];
+
+// The current image to be shown (arrays go from 0 to array.length - 1)
+let currentImage = 0;
+
+// This variable is true when the code first starts running
+let firstRun = true;
+
+let img;
+let img2;
+let img3;
+let img4; 
+let img5;
+
+let circleSizeX =0
+let circleSizeY = 0
+
+let circle2X = 250
+let circle2Y = 250
+
+let circle3X = 500
+let circle3Y = 500
+
+let circle4X = 750
+let circle4Y = 750
+
+
+
+
+
+   function draw_one_frame(words, vocal, drum, bass, other, counter) {
+   background(13, 2, 33)
+
+   if(firstRun){
+    img = loadImage('image1.png');
+    img2 = loadImage ('image2.png');
+    img3 = loadImage ('image3.png');
+    img4 = loadImage ('image4.png')
+    img5 = loadImage ('image5.png')
+
+   
+    firstRun = false 
+
+   }
+
+   let starSize1 = map (bass, 0, 100, 0, 20)
+   let starSize2 = map (vocal, 0, 100, 10, 40)
+   stroke (0)
+   fill (63, 54, 105)
+   ellipse (280,547,starSize1)
+   ellipse (672,78,starSize2)
+   ellipse (36,306,starSize1)
+   ellipse (162,350,starSize2)
+   ellipse (28,547,starSize1)
+   ellipse (672,730,starSize2)
+   ellipse (647,306,starSize2)
+   ellipse (120,270,starSize2)
+   ellipse (50,690,starSize1)
+   ellipse (100,633,starSize2)
+   ellipse (340,130,starSize1)
+   ellipse (310,110,starSize2)
+   ellipse (162,350,starSize2)
+
+   image (img, 0, 0, circleSizeX, circleSizeY)
+
+   
+   circleSizeX = circleSizeX + 6
+   circleSizeY = circleSizeY + 6
+
+   if (circleSizeX > 800)
+    circleSizeX = 10
+
+   if(circleSizeY > 800)
+    circleSizeY = 10
+
+   image (img2, 0, 0, circle2X, circle2Y)
+
+   circle2X = circle2X + 6
+   circle2Y = circle2Y + 6
+
+   if (circle2X > 800)
+    circle2X = 10
+
+   if(circle2Y > 800)
+    circle2Y = 10
+ 
+   image (img3, 0, 0, circle3X, circle3Y)
+
+   circle3X = circle3X + 6
+   circle3Y = circle3Y + 6
+
+   if (circle3X > 800)
+    circle3X = 10
+
+   if(circle3Y > 800)
+    circle3Y = 10
+
+   image (img4, 0, 0)
+
+
+
+  let drawMap1 = map (drum, 0, 100, 0, 180)
+  
+  push()
+  
+   translate (400, 400)
+   rotate(drawMap1)
+  //  ellipse (0, 0, 10, 10)
+   image (img5, -400, -400)
+
+   pop()
+
+   if 
+
+ 
+
+   
+  
+
+  
+
+
+
+   }
+
+//    fill(180, 52, 235) // purple 
+//    stroke (235, 116, 52) // orange 
+
+//    rect( 400, 400, 750, 750) // rectangle boarder
+   
+//    stroke (235, 79, 52) // reddish orange 
+//    let drawMap = map (drum, 0, 100, 0, 35)
+//    let lengthOfLine = 280
+//    let lineStart = 85
+//    let lineEnd = lineStart + lengthOfLine
+
+//    for(let i =9; i <= drawMap; i++) {
+
+//     let lineStep = i * 15;
+//     line (lineStart,lineStep,lineEnd,lineStep)
+    
+//    }
+// // if bass reaches a certian number show this screen image
+
+
+//    let lineStart2 = 435
+//    let lineLength2 = 280
+//    let lineEnd2 = lineStart2 + lineLength2
+//    let drawMap2 = map (vocal, 0, 100, 0, 35)
+
+//    for(let i = 15; i < drawMap2; i=i+1 ) {
+
+//     let lineStep2 = i * 15;
+    
+//     line (lineStart2, lineStep2, lineEnd2, lineStep2)
+//    }
+
+
+//    let drawMap3 = map (bass, 0, 100, 0, 20)
+//    let lengthOfLine3 = 280
+//    let lineStart3 = 85
+//    let lineEnd3 = lineStart + lengthOfLine3
+
+//    push()
+//    translate(0, 360)
+//    for(let i =10; i <= drawMap3; i++) {
+
+//     let lineStep3 = i * 15;
+//     line (lineStart3,lineStep3,lineEnd3,lineStep3)
+
+//    }
+//    pop()
+
+
+   
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+// if (firstRun) {
+
+  //   // This loads in the images and then "pushes" them onto the array
+  //   images.push(loadImage("myImage1.png"));
+  //   images.push(loadImage("myImage2.png"));
+  //   images.push(loadImage("myImage3.png"));
+  //   images.push(loadImage("myImage4.png"));
+
+  //   // This makes it so this part of the code does not run again
+  //   firstRun = false;
+  // }
+
+  // background(0);
+
+  // // Run if the counter is bigger than 0
+  // if (counter > 0) {
+  //   // Draw image
+  //   image(images[currentImage], 0, 0);
+
+  //   // Every time counter is a multiple of 50, change to next frame
+  //   if (counter % 50 == 0) {
+  //     currentImage++;
+  //   }
+    
+  //   // If the current image number is bigger than or equal to the length of the
+  //   // array, reset the counter 
+  //   if (currentImage >= images.length) {
+  //     currentImage = 0;
+  //   }
+  //   console.log(currentImage)
+    
+  // }
+
 // // minimum and maximum points for firework 0
 // let fireworkMinPoint0 = 40;
 // let fireworkMaxPoint0 = 150;
@@ -157,52 +384,3 @@
   //   Xmove = 0;
   // }
 // }
-
-
-
-
-// This array stores multiple images, but that image needs to be loaded
-let images = [];
-
-// The current image to be shown (arrays go from 0 to array.length - 1)
-let currentImage = 0;
-
-// This variable is true when the code first starts running
-let firstRun = true;
-
-function draw_one_frame(words, vocal, drum, bass, other, counter) {
-  // This checks if this is the first time the code is running
-  // We do this because we only need to load the image one time
-  if (firstRun) {
-
-    // This loads in the images and then "pushes" them onto the array
-    images.push(loadImage("myImage1.png"));
-    images.push(loadImage("myImage2.png"));
-    images.push(loadImage("myImage3.png"));
-    images.push(loadImage("myImage4.png"));
-
-    // This makes it so this part of the code does not run again
-    firstRun = false;
-  }
-
-  background(0);
-
-  // Run if the counter is bigger than 0
-  if (counter > 0) {
-    // Draw image
-    image(images[currentImage], 0, 0);
-
-    // Every time counter is a multiple of 50, change to next frame
-    if (counter % 50 == 0) {
-      currentImage++;
-    }
-    
-    // If the current image number is bigger than or equal to the length of the
-    // array, reset the counter 
-    if (currentImage >= images.length) {
-      currentImage = 0;
-    }
-    console.log(currentImage)
-    
-  }
-}
